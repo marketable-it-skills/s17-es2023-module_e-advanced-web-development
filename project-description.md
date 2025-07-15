@@ -87,7 +87,9 @@ Therefore, they must be implemented a bit differently and for this to work, the 
 For this task, you are expected to create three web components and embed them in a simple website.
 You are not allowed to use any framework or library for this task.
 
-#### Limited Textarea (`<limited-textarea>`)
+#### Limited Textarea
+
+`<limited-textarea>`
 
 This component renders a textarea that has a character limit.
 However, this limit is not strictly enforced, meaning the user can still enter more characters but the field is not considered valid anymore.
@@ -123,7 +125,9 @@ Example:
 
 ![limited-textarea example](./handout-competitor/task3/limited-textarea.png)
 
-#### `<confirmation-modal>`
+#### Confirmation Modal
+
+`<confirmation-modal>`
 
 Create a simple modal that displays any content that is provided, as well as a button with the provided label which closes the modal.
 It opens automatically when the modal element is created.
@@ -156,7 +160,9 @@ Example:
 
 ![confirmation-modal example](./handout-competitor/task3/confirmation-modal.png)
 
-#### `<count-down>`
+#### Count Down
+
+`<count-down>`
 
 The countdown component counts down to the given time and date and displays a message once that is reached.
 
