@@ -1,21 +1,18 @@
-# Test Project Outline – Module E — Advanced Web Development
+# Test Project Outline – Module E – Advanced Web Development
 
-This document outlines the description of Module E. It is circulated to the competitors and experts 3 months prior to
-the competition. This outline only describes the basic information of module E. The actual test project module will be
-created by external Test Project Developers using this outline as a guide. The module description will be presented on
-C-2 to all experts. The marking scheme will not be presented or supplied to competitors or experts during the
-competition.
+## Competition time
+
+Competitors will have **3 hours** to complete module E.
 
 ## Introduction
 
-Module E is not focusing on a single topic, but groups several skills that previously were not covered in the test
-project. The skills that will be tested in this module are:
+Module E focuses on advanced web development skills that demonstrate proficiency beyond basic frontend and backend development. The skills that will be tested in this module are:
 
 1. Writing automated tests
 2. Creating a Progressive Web App (PWA)
 3. Creating a Web Component
 
-## Description of project and Tasks
+## General Description of Project and Tasks
 
 **1. Writing automated tests**
 
@@ -36,45 +33,7 @@ The competitor will have to create one or more Web Components that can be used i
 Web Components will be provided. The competitor must also show how the Web Components can be used in a website by
 creating a simple website. The competitor is not allowed to use any frameworks or libraries for this task.
 
-## Assessment
-
-**1. Writing automated tests**
-
-It will be assessed if the created test set is grouped logically and if the tests are written in a way that they are
-easy to understand. The test must pass when running against the original code, and not pass any logically mutated
-version of that code (Mutation Testing).
-
-**2. Creating a Progressive Web App (PWA)**
-
-The functionality of the PWA will be assessed using the latest stable version of Google Chrome. It will be tested that
-the app can be installed on the user's device, that it can work offline by showing the last known data, and that it can
-receive push notifications.
-
-**3. Creating a Web Component**
-
-The created component API will be checked against the specification. A test page that is not provided to competitors
-will integrate the created components and be used to test their functionality.
-
-## Competition time
-
-Competitors will have **3 hours** to complete module E.
-
-## Mark distribution
-
-The table below outlines how marks are broken down and how they align with the WorldSkills Occupation Standards (WSOS).
-Please read the Technical Description for a full explanation of the WorldSkills Occupation Standards.
-
-| WSOS SECTION | Description                            | Points |
-| ------------ | -------------------------------------- | ------ |
-| 1            | Work organisation and self-management  | 2      |
-| 2            | Communication and interpersonal skills | 1      |
-| 3            | Design Implementation                  | 0      |
-| 4            | Front-End Development                  | 8      |
-| 5            | Back-End Development                   | 5      |
-|              |                                        |        |
-| **Total**    |                                        | 16     |
-
-# Module E – Advanced Web Development
+## Requirements
 
 In this module, you are expected to solve three tasks.
 
@@ -82,7 +41,7 @@ Within the media files, you will find three starter kits for each task. You are 
 base for your solution. You are not allowed to use any frameworks or libraries for this module except a
 testing framework for task 1.
 
-## Task 1: Writing automated tests
+### Task 1: Writing automated tests
 
 You are given a JavaScript project that has no automated tests. You must write automated unit tests for the project.
 A complete test set is expected which covers 100% of the provided code lines and conditionals. A JavaScript testing
@@ -96,7 +55,7 @@ These are the assessment criteria for this task:
 - The tests cover 100% of the provided code lines and conditionals.
 - The tests do not pass any logically mutated version of that code (Mutation Testing).
 
-## Task 2: Creating a Progressive Web App (PWA)
+### Task 2: Creating a Progressive Web App (PWA)
 
 Your task is to create a progressive web app for an AI news site.
 The backend is already provided to you with an OpenAPI specification explaining the available endpoints.
@@ -114,7 +73,7 @@ The app has the following requirements:
 Because PWAs do not work with file URLs, a simple HTTP server is provided to you.
 See the handout for instructions on how to start it and where the API can be acecssed.
 
-### Notifications
+#### Notifications
 
 As the competition takes place in an offline environment, it is not possible to implement real push notifications.
 Therefore, they must be implemented a bit differently and for this to work, the app needs to be always open.
@@ -123,12 +82,12 @@ Therefore, they must be implemented a bit differently and for this to work, the 
 - If there is a new article, a notification must be shown, but only if the app is not visible at the moment (app window open in the background)
 - The notification contains the title of the new article and an application icon
 
-## Task 3: Creating a Web Component
+### Task 3: Creating a Web Component
 
 For this task, you are expected to create three web components and embed them in a simple website.
 You are not allowed to use any framework or library for this task.
 
-### `<limited-textarea>`
+#### `<limited-textarea>`
 
 This component renders a textarea that has a character limit.
 However, this limit is not strictly enforced, meaning the user can still enter more characters but the field is not considered valid anymore.
@@ -164,7 +123,7 @@ Example:
 
 ![limited-textarea example](./handout-competitor/task3/limited-textarea.png)
 
-### `<confirmation-modal>`
+#### `<confirmation-modal>`
 
 Create a simple modal that displays any content that is provided, as well as a button with the provided label which closes the modal.
 It opens automatically when the modal element is created.
@@ -197,7 +156,7 @@ Example:
 
 ![confirmation-modal example](./handout-competitor/task3/confirmation-modal.png)
 
-### `<count-down>`
+#### `<count-down>`
 
 The countdown component counts down to the given time and date and displays a message once that is reached.
 
@@ -219,3 +178,37 @@ Other requirements:
 Example:
 
 ![count-down example](./handout-competitor/task3/count-down.png)
+
+## Assessment
+
+**1. Writing automated tests**
+
+It will be assessed if the created test set is grouped logically and if the tests are written in a way that they are
+easy to understand. The test must pass when running against the original code, and not pass any logically mutated
+version of that code (Mutation Testing).
+
+**2. Creating a Progressive Web App (PWA)**
+
+The functionality of the PWA will be assessed using the latest stable version of Google Chrome. It will be tested that
+the app can be installed on the user's device, that it can work offline by showing the last known data, and that it can
+receive push notifications.
+
+**3. Creating a Web Component**
+
+The created component API will be checked against the specification. A test page that is not provided to competitors
+will integrate the created components and be used to test their functionality.
+
+## Mark distribution
+
+The table below outlines how marks are broken down and how they align with the WorldSkills Occupation Standards (WSOS).
+Please read the Technical Description for a full explanation of the WorldSkills Occupation Standards.
+
+| WSOS SECTION | Description                            | Points |
+| ------------ | -------------------------------------- | ------ |
+| 1            | Work organisation and self-management  | 2      |
+| 2            | Communication and interpersonal skills | 1      |
+| 3            | Design Implementation                  | 0      |
+| 4            | Front-End Development                  | 8      |
+| 5            | Back-End Development                   | 5      |
+|              |                                        |        |
+| **Total**    |                                        | 16     |

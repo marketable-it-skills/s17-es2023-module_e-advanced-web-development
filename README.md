@@ -2,11 +2,11 @@
 
 ## Title of the Project
 
-Commercial Open API
+Advanced Web Development
 
 ## Short Description
 
-Create a secure REST API that provides commercial access to AI services (chat, image generation, and image recognition) with authentication, quota management, billing tracking, and comprehensive error handling.
+Develop advanced web development skills through automated testing, Progressive Web App (PWA) creation, and custom Web Components development. Build comprehensive test suites, create installable PWAs with offline functionality, and develop reusable web components.
 
 ## Skill domain(s)
 
@@ -14,7 +14,7 @@ Create a secure REST API that provides commercial access to AI services (chat, i
 
 ## Task Origin
 
-This project task is based on test projects from the EuroSkills Gdansk 2023 competition Module C test project submitted by Cyril Wanner (CH) and Sebastian Häni (CH). Tasks from these competitions are updated, modularized, and standardized to form the basis of the project task repository within the Erasmus+ "Marketable IT Skills" project.
+This project task is based on test projects from the EuroSkills Gdansk 2023 competition Module E test project submitted by Cyril Wanner (CH) and Sebastian Häni (CH). Tasks from these competitions are updated, modularized, and standardized to form the basis of the project task repository within the Erasmus+ "Marketable IT Skills" project.
 
 ## Content
 

@@ -1,170 +1,156 @@
 {
-  "totalMark": 17,
+  "totalMark": 16,
   "wsosSections": {
     "1": "Work organization and self-management",
     "2": "Communication and interpersonal skills",
+    "4": "Front-End Development",
     "5": "Back-End Development"
   },
   "subCriterions": [
     {
-      "name": "Deliverables",
+      "name": "Task 1 - Writing automated tests",
       "aspects": [
         {
           "type": "measurement",
-          "description": "Database dump is provided",
-          "maxMark": 0.25,
-          "wsosSection": 1,
-          "extraDescription": "There is a file containing SQL which contains the structure and data from the previous module, and the newly added structure and data. The file can be executed on a database server in an empty database without errors.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Server application deployed",
-          "maxMark": 0.75,
-          "wsosSection": 1,
-          "extraDescription": "The server application is deployed and running on the server and is ready to be invoked. It has the data provided loaded into the database.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Authentication",
-      "aspects": [
-        {
-          "type": "measurement",
-          "description": "Authentication token is required",
+          "description": "Tests passing",
           "maxMark": 1,
           "wsosSection": 5,
-          "extraDescription": "For any request, the token X-API-TOKEN is required. If it is missing or not valid, the API does not proceed.",
+          "extraDescription": "There is at least one test with an assertion and all tests are passing.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Authentication error response",
+          "description": "Test coverage at least 80%",
+          "maxMark": 0.5,
+          "wsosSection": 5,
+          "extraDescription": "The test coverage of lines and conditionals is at least 80%",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Test coverage is 100%",
+          "maxMark": 1,
+          "wsosSection": 5,
+          "extraDescription": "The test coverage of lines and conditionals is 100%",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "There is a maximum of 15 mutants surviving",
+          "maxMark": 1,
+          "wsosSection": 5,
+          "extraDescription": "A maximum of 15 mutants survive after running the tests with a mutation testing framework.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "There is a maximum of 3 mutants surviving",
+          "maxMark": 1,
+          "wsosSection": 5,
+          "extraDescription": "A maximum of 3 mutants survive after running the tests with a mutation testing framework.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Tests grouped logically",
+          "maxMark": 1,
+          "wsosSection": 1,
+          "judgementScoreDescription": [
+            "Tests are not grouped logically, resulting in a disorganized and confusing structure.",
+            "Tests are partially grouped logically, but there are inconsistencies or unclear organization that may lead to some confusion.",
+            "Tests are generally grouped logically, making it relatively easy for users to find and navigate through different test categories. However, there might be a few instances where the grouping could be improved for better clarity.",
+            "Tests are well-grouped logically, providing users with clear and intuitive categorization. It is easy to locate and access specific tests based on their related topics or themes."
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "Tests are easy to understand",
           "maxMark": 0.5,
           "wsosSection": 2,
-          "extraDescription": "The expected error response according to the specification is returned if the token is missing or invalid.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Correct workspace association",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "Specyfing the token selects the correct underlying workspace for quotas and billing. This can be verified by calling an AI function and checking if the billing of the correct workspace is updated.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
+          "judgementScoreDescription": [
+            "The unit tests lack clarity and are challenging to understand. The language used is overly technical, convoluted, or fails to follow the recognizable \"Arrange, Act, Assert\" structure commonly associated with unit tests. As a result, users may struggle to comprehend the purpose, steps, or expected outcomes of the tests.",
+            "The unit tests are somewhat understandable, but there are instances where the language or structure could be improved for better clarity. While there may be elements of the \"Arrange, Act, Assert\" pattern, it is not consistently followed or clearly recognizable, requiring users to make additional effort to interpret the tests' purpose and expected results.",
+            "The unit tests are generally written in a way that is easy to understand. The language used is clear and concise, and the \"Arrange, Act, Assert\" pattern is recognizable, allowing users to grasp the purpose and expected outcomes of the tests with relative ease.",
+            "The unit tests are exceptionally well-written and easy to understand. The language used is simple, precise, and effectively follows the \"Arrange, Act, Assert\" pattern, ensuring that users can easily identify the different sections and comprehend the purpose, steps, and expected results of the tests."
+          ]
         }
       ]
     },
     {
-      "name": "Quotas",
+      "name": "Task 2 - Creating a progressive web app",
       "aspects": [
         {
           "type": "measurement",
-          "description": "Quota enforced",
+          "description": "The application is installable on a device",
           "maxMark": 1,
-          "wsosSection": 5,
-          "extraDescription": "When the quota is exceeded, any request to start a new computation is denied (according to which endpoints return 403 in the API specification).",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Error Handling",
-      "aspects": [
-        {
-          "type": "measurement",
-          "description": "AI Service returns unexpected error",
-          "maxMark": 0.5,
-          "wsosSection": 2,
-          "extraDescription": "If the AI service returns an unexpected error with status 500, the respective endpoints implemented by the competitor return a 503 response according to the spec.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Chat",
-      "aspects": [
-        {
-          "type": "measurement",
-          "description": "Conversation start",
-          "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "A conversation can be started with an initial prompt. The endpoint response contains the conversation ID, response (can be empty string), and if the response is final.",
+          "wsosSection": 4,
+          "extraDescription": "There is an \"Install [app name]\" button in the URL bar in Chrome",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Converstation response",
+          "description": "All news are displayed in a list with their title and image",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "The response is provided in the GET endpoint. The final flag is set when the response is final. Calling the endpoint multiple times reveals the latest available response from the Chatterblast service.",
+          "wsosSection": 4,
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Converstation continuation",
+          "description": "When there is no internet, the last loaded news (titles) are displayed when the app is opened",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "The conversation can be continued with the PUT endpoint. The endpoint response contains the expected fields.",
+          "wsosSection": 4,
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Inputs blocked while response in progress",
+          "description": "When there is no internet, the images of the news in the list are still displayed",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "When there is internet again, new articles are loaded again",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "If there is internet, the API is always called and not just cached responses are returned",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "New articles are polled in the background while the app is open and notification is sent if a new article is detected",
           "maxMark": 1,
-          "wsosSection": 5,
-          "extraDescription": "If there was a prompt submitted, further prompts are cancelled and a response with status code 400 is returned while the previous response is not yet final.",
+          "wsosSection": 4,
+          "extraDescription": "The app still needs to be open in the background / in a tab for this to work (since real push notifications are not available in an offline environment). Trigger a new news article by calling the trigger endpoint of the provided API",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "EOF indicator",
-          "maxMark": 1,
-          "wsosSection": 5,
-          "extraDescription": "The <EOF> indicator and what comes after it is not included in the response.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Converstation not found",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "If the provided conversation ID does not exist, a 404 error is returned according to the specification.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Billing",
-          "maxMark": 1.5,
-          "wsosSection": 5,
-          "extraDescription": "The biling of the workspace is updated once the final answer is returned with the provided time it took according the the indicator.",
+          "description": "The app opens to the list of news articles when the notification is clicked",
+          "maxMark": 0.5,
+          "wsosSection": 4,
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -172,84 +158,22 @@
       ]
     },
     {
-      "name": "Image Generation",
+      "name": "Task 3 - Creating web components - General",
       "aspects": [
         {
           "type": "measurement",
-          "description": "Generation job start",
+          "description": "The attributes & events of all components are exactly as requested",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "A image generation job can be started. The endpoint response contains the job ID according to the specification.",
+          "wsosSection": 4,
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Job status",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "The job status endpoint returns the current status, progress and an image URL according to the specification.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Preliminary image is available",
-          "maxMark": 1.5,
-          "wsosSection": 5,
-          "extraDescription": "The image URL in the job status response points to a URL on the newly written server by the competitor and returns the image in a way that it can be included in a <img> tag.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Result",
+          "description": "There is an example website which includes examples for each component as requested",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "The job result endpoint returns a resource ID and an image URL which can be included in a <img> tag.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Upscale",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "The generated image can be upscaled. The upscale endpoint returns a job ID according to the specification.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Zoom in / out",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "The generated image can be zoomed in or out. The zoom in/out endpoints returns a job ID according to the specification.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Not found",
-          "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "The following endpoints all return a 404 error according the spec if a non existing resource is provided: job status, job result, upscale, zoom in, zoom out.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Billing",
-          "maxMark": 1.5,
-          "wsosSection": 5,
-          "extraDescription": "The biling of the workspace is updated once the image generation job has completed with the duration it took DreamWeaver to complete the job.",
+          "wsosSection": 4,
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -257,34 +181,178 @@
       ]
     },
     {
-      "name": "Image Recognition",
+      "name": "Task 3 - Creating web components - Limited Textarea",
       "aspects": [
         {
           "type": "measurement",
-          "description": "Image Upload",
-          "maxMark": 1.5,
-          "wsosSection": 5,
-          "extraDescription": "An image can be uploaded via multipart form.",
+          "description": "A text area and a text showing the character limit are rendered as specified",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "\"characters left\" text is below the text area and has the color #666, textarea takes full available width and is not resizable",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Image recognition response",
-          "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "The recognition response is returned with the correct mapping of x, y, width, height from the AI services original top, left, bottom, right response.",
+          "description": "The color of the characters left changes according to the remaining number",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "#000 by default, #f0620d if below 10%, #ea1010 when limit exceeded",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Billing",
+          "description": "Component does not inherit any other global styles besides the font",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "The billing of the workspace is updated with the duration of the request to the Mindreader service.",
+          "wsosSection": 4,
+          "extraDescription": "To test, add <style>textarea { background: red; }</style> to the page",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Attributes of the component can change at any time",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Change the \"maxchars\" attribute on the element using the browsers dev tools, the change should be reflected immediately on the page without any other interaction",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The \"change\" event is fired",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "The event data should be logged to the browser's console with the correct data (value and whether it is valid)",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The \"change\" event is fired immediately for each character",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "While you keep pressing down one key on the keyboard, it should insert it multiple times into the text field and the event should be triggered the same amount of times",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 3 - Creating web components - Confirmation Modal",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Modal opens automatically on page load",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The label attribute is used for the button and the children for the content of the modal",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Attributes of the component can change at any time",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Change the label attribute on the element and the children using the browsers dev tools, the change should be reflected immediately on the page without any other interaction",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The rest of the website has an overlay",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Overlay has color rgba(0, 0, 0, 0.3)",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The button to close it is align to the right in the modal",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The \"confirm\" event is fired",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "The event should be logged to the browser's console",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 3 - Creating web components - Count Down",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "The date attribute takes a valid ISO 8601 string and the message attribute is displayed once the date is reached",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The example website contains one timer which counts down to 15s in the future on page load and another one which counts down to 01.01.2024 00:00:00",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Remaining time is displayed in the correct format",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "`10 days 17:03:10 left` (hours, minutes, and seconds have always 2 digits)",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Remaining time gets updated automatically once a second",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Attributes of the component can change at any time",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Change the date & message attribute on the element using the browsers dev tools, the change should be reflected immediately on the page without any other interaction",
           "calculation": {
             "type": "pass-or-fail"
           }
