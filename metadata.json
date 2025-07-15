@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "name": "ES2023 S17 - Module C",
+  "displayName": "Commercial Open API",
+  "description": "Create a REST API that provides commercial access to AI services with authentication, quotas, billing, and error handling. Build secure endpoints that wrap ChatterBlast (chat), DreamWeaver (image generation), and MindReader (image recognition) services.",
+  "url": "https://github.com/marketable-it-skills/s17-es2023-module_c-commercial-open-api",
+  "skillDomainIds": [1],
+  "competition": "EuroSkills Gdansk 2023",
+  "estTime": 3,
+  "authors": [
+    { "name": "Cyril Wanner", "url": "" },
+    { "name": "Sebastian Häni", "url": "" }
+  ],
+  "technologies": ["TypeScript", "Node.js", "REST API", "Express", "MySQL", "Docker", "OpenAPI"],
+  "tags": ["backend", "api", "authentication", "billing", "ai-services", "database"]
+}
