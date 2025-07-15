@@ -123,7 +123,7 @@ Example:
 <limited-textarea maxchars="250"></limited-textarea>
 ```
 
-![limited-textarea example](./handout-competitor/task3/limited-textarea.png)
+![limited-textarea example](./assets/project-description-images/limited-textarea.png)
 
 #### Confirmation Modal
 
@@ -158,7 +158,7 @@ Example:
 </confirmation-modal>
 ```
 
-![confirmation-modal example](./handout-competitor/task3/confirmation-modal.png)
+![confirmation-modal example](./assets/project-description-images/confirmation-modal.png)
 
 #### Count Down
 
@@ -183,7 +183,7 @@ Other requirements:
 
 Example:
 
-![count-down example](./handout-competitor/task3/count-down.png)
+![count-down example](./assets/project-description-images/count-down.png)
 
 ## Assessment
 
