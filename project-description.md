@@ -87,7 +87,7 @@ Therefore, they must be implemented a bit differently and for this to work, the 
 For this task, you are expected to create three web components and embed them in a simple website.
 You are not allowed to use any framework or library for this task.
 
-#### `<limited-textarea>`
+#### Limited Textarea (`<limited-textarea>`)
 
 This component renders a textarea that has a character limit.
 However, this limit is not strictly enforced, meaning the user can still enter more characters but the field is not considered valid anymore.
